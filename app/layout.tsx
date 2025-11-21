@@ -5,6 +5,7 @@ import theme from './themeConfig';
 import './globals.css';
 import { App, Breadcrumb, ConfigProvider, Menu } from 'antd';
 import Layout, { Content, Footer, Header } from 'antd/es/layout/layout';
+import UserMenu from '@/components/UserMenu';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,13 +26,23 @@ export default function RootLayout({ children }: React.PropsWithChildren) {
 				<ConfigProvider theme={theme}>
 					<App>
 						<Layout style={{ minHeight: '100vh' }}>
-							<Header style={{ display: 'flex', alignItems: 'center' }}>
+							<Header
+								style={{
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'space-between',
+									padding: '0 24px',
+									background: '#000',
+								}}
+							>
 								<Menu
 									items={items}
 									mode="horizontal"
 									defaultSelectedKeys={['2']}
 									style={{ flex: 1, minWidth: 0 }}
+									theme="dark"
 								/>
+								<UserMenu />
 							</Header>
 							<Content style={{ padding: '0 48px' }}>
 								<Breadcrumb

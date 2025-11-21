@@ -1,18 +1,19 @@
-import { Button, Form } from 'antd';
+import { Button } from 'antd';
 import { signOut } from '@/auth';
 
 export default function SignOut({ children }: { children: React.ReactNode }) {
 	return (
-		<Form
-			onFinish={async () => {
+		<form
+			action={async () => {
 				'use server';
 				await signOut();
 			}}
+			style={{ display: 'flex', alignItems: 'center', gap: 8 }}
 		>
-			<p>{children}</p>
+			<span style={{ fontWeight: 500 }}>{children}</span>
 			<Button danger htmlType="submit">
 				Sign out
 			</Button>
-		</Form>
+		</form>
 	);
 }
