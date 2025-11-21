@@ -1,25 +1,15 @@
-# Authentication
+# [TFState.chommel.eu](https://tfstate.chommel.eu/)
 
-This is an example using NextAuth.js for authentication.
+Manages Terraform and OpenTofu state. Accessable inside GitHub Actions.
 
-## How to use
+Work in progress❗
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), [pnpm](https://pnpm.io), or [Bun](https://bun.sh/docs/cli/bunx) to bootstrap the example:
+## How It Works
 
-```bash
-npx create-next-app --example auth auth-app
-```
+- This App is Deployed to Vercel
+- State will be stored inside "Blob"-Storage
+- Authentication is done through GitHub Issued JWT Tokens. see:
+  - https://docs.github.com/en/actions/reference/security/oidc
+  - https://medium.com/@bdalpe/using-github-actions-tokens-for-authentication-to-kubernetes-clusters-6032170935b9
 
-```bash
-yarn create next-app --example auth auth-app
-```
 
-```bash
-pnpm create next-app --example auth auth-app
-```
-
-```bash
-bunx create-next-app --example auth auth-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
